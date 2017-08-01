@@ -7,7 +7,7 @@ var port = 5000;
 app.use(express.static('public'));
 
 app.get('/random', function(req, res){
-    res.send();
+    res.send(randomNumber());
 });
 
 app.listen(port, function(){
@@ -15,7 +15,8 @@ app.listen(port, function(){
 });
 
 function randomNumber() {
-   return Math.floor(Math.random() * (1 + 2 - 0) + 0);
-
+    var answer = Math.floor(Math.random() * (1 + 2 - 0) + 0);
+    return answer.toString();
+   
     }
 console.log(randomNumber());
